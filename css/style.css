@@ -1,16 +1,33 @@
-* {
+*,
+*::after,
+*::before
+ {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+    
+}
+
+html {
+    
+    /* font-size: 10px; */
+    /* its is quite helpfull to declare fontsize here but is very bad example and it will
+       user's choice of zooming the page thats why we will declare font size in percentage
+       as the browser give 16px by default so 62.5%  is equal to 10px and i m using this
+       percentage here */
+
+       font-size: 62.5%;
 }
 
 body {
     font-family: "lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
+    
 }
 
 .header {
@@ -29,12 +46,12 @@ body {
 
 .logobox {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -51,14 +68,14 @@ body {
     /* animation fix dont realy known but it fix it */
     backface-visibility: hidden;
     /* defining space between heading and button */
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -69,9 +86,9 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
     /* animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out; */
@@ -81,10 +98,10 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     80% {
-        transform: translate(10px);
+        transform: translate(1rem);
     }
     100% {
         opacity: 1;
@@ -95,10 +112,10 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     80% {
-        transform: translate(-10px);
+        transform: translate(-1rem);
     }
     100% {
         opacity: 1;
@@ -109,10 +126,10 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(10rem);
     }
     80% {
-        transform: translateY(-15px);
+        transform: translateY(-.5rem);
     }
     100% {
         opacity: 1;
@@ -124,8 +141,8 @@ body {
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
-    border-radius: 200px;
+    padding: 1.5rem 4rem;
+    border-radius: 20rem;
     display: inline-block;
     position: relative;
 
@@ -134,12 +151,12 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgb(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgb(0,0,0,.2);
 }
 
 .btn:active {
     transform: translateY(1px);
-    box-shadow: 0 10px 20px rgb(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgb(0,0,0,.2);
 }
 .btn-white {
     background-color: #ffffff;
@@ -151,7 +168,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 200px;
+    border-radius: 20rem;
     position: absolute;
     top: 0;
     left: 0;
