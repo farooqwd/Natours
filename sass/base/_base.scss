@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    
+}
+
+html {
+    font-size: 62.5%;
+    /* font-size: 10px; */
+    /* its is quite helpfull to declare fontsize here but is very bad example and it will
+       user's choice of zooming the page thats why we will declare font size in percentage
+       as the browser give 16px by default so 62.5%  is equal to 10px and i m using this
+       percentage here */
+}
+
+body {
+    box-sizing: border-box;
+}
