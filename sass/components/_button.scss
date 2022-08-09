@@ -1,5 +1,6 @@
 
 .btn {
+    &,
     &:link,
     &:visited {
     text-transform: uppercase;
@@ -8,6 +9,9 @@
     border-radius: 20rem;
     display: inline-block;
     position: relative;
+
+    border: none;
+    cursor: pointer;
 
     transition: all .2s;
     }
