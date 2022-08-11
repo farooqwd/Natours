@@ -15,8 +15,29 @@ html {
        user's choice of zooming the page thats why we will declare font size in percentage
        as the browser give 16px by default so 62.5%  is equal to 10px and i m using this
        percentage here */
+
+    //    @include respond(phone) {
+    //     font-size: 50%;
+    //    }
+    
+    @include respond(tab-land) {
+        font-size: 56.25%;    // here 1rem = 9px; 9/16=56.25%
+    }
+    
+    @include respond(tab-port) {
+        font-size: 50%;  // 1rem = 8px,  8/16=50% mean if someone define  fontsize = 50%  in html then 1 rem will be 8px;
+    }
+    
+    @include respond(big) {
+        font-size: 75%;       // here 1rem = 12px 12/16 = 75%
+    }
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }
